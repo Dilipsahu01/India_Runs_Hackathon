@@ -7,12 +7,12 @@ team_name: "NULL"
 
 primary_contact:
   name: "Dilip Sahu"
-  email: "dilip.sahu@example.com"
-  phone: "+91-XXXXXXXXXX"        
+  email: "dilipsahuop@gmail.com"
+  phone: "+91-8233958847"        
 
 team_members:
   - name: "Dilip Sahu"
-    email: "dilip.sahu@example.com"
+    email: "dilipsahuop@gmail.com"
     role: "ML Engineer"
 
 # ============================================================================
