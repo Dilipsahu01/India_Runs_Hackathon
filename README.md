@@ -1,4 +1,4 @@
-# 🏃 India Runs Hackathon
+# India Runs Hackathon
 
 ## *How do you find 100 perfect AI Engineers among 100,000 candidates... on a CPU... in under 5 minutes?*
 
@@ -10,7 +10,7 @@ And that changed everything.
 
 ---
 
-# 🤔 The Problem Nobody Talks About
+# The Problem Nobody Talks About
 
 Imagine opening a folder containing **100,000 candidate profiles**.
 
@@ -28,10 +28,10 @@ No cloud vector databases.
 
 Just:
 
-* ⏱️ 5 minutes
-* 🖥️ CPU only
-* 💾 16GB RAM
-* 🚫 Zero network access
+* 5 minutes
+* CPU only
+* 16GB RAM
+* Zero network access
 
 And one goal:
 
@@ -47,7 +47,7 @@ Which means...
 
 ---
 
-# 💡 The Moment Everything Changed
+# The Moment Everything Changed
 
 Most solutions ask:
 
@@ -65,7 +65,7 @@ we solved a **data funnel optimization problem**.
 
 ---
 
-# ⚡ The Philosophy
+# The Philosophy
 
 Spend expensive AI compute only where it matters.
 
@@ -81,7 +81,7 @@ Eliminate using cheap mathematics.
 
 ---
 
-# 🎯 The 3-Stage Funnel
+# The 3-Stage Funnel
 
 ```text
 100,000 Candidates
@@ -124,7 +124,7 @@ Production-grade.
 
 ---
 
-# 🪤 Stage 1 — The Honeypot Nuke
+# Stage 1 — The Honeypot Nuke
 
 Before AI touches anything...
 
@@ -151,10 +151,10 @@ Some profiles looked like this:
 A naïve semantic model sees:
 
 ```
-ChatGPT ✅
-RAG ✅
-Embeddings ✅
-Vector DB ✅
+ChatGPT [Matched]
+RAG [Matched]
+Embeddings [Matched]
+Vector DB [Matched]
 ```
 
 and screams:
@@ -200,7 +200,7 @@ The AI never even sees them.
 
 ---
 
-# ⏳ Stage 1.5 — Time Travelers Don't Exist
+# Stage 1.5 — Time Travelers Don't Exist
 
 Another trap.
 
@@ -231,7 +231,7 @@ Eliminated.
 
 ---
 
-# 🚫 The Service-Firm Filter
+# The Service-Firm Filter
 
 The JD wanted:
 
@@ -254,7 +254,7 @@ not just keywords.
 
 ---
 
-# ⚡ Stage 2 — The Compute Neutralizer
+# Stage 2 — The Compute Neutralizer
 
 Here's a question:
 
@@ -312,7 +312,7 @@ Massive impact.
 
 ---
 
-# 🧠 Stage 3 — Where AI Finally Enters
+# Stage 3 — Where AI Finally Enters
 
 Only now...
 
@@ -378,7 +378,7 @@ It's about availability.
 
 ---
 
-# 🐛 The Bug Nobody Notices
+# The Bug Nobody Notices
 
 Imagine two candidates getting:
 
@@ -418,7 +418,7 @@ Production engineering matters.
 
 ---
 
-# 🏗 Repository Structure
+# Repository Structure
 
 ```bash
 .
@@ -433,7 +433,7 @@ Production engineering matters.
 
 ---
 
-# 🚀 Running the Pipeline
+# Running the Pipeline
 
 ## Install dependencies
 
@@ -475,7 +475,7 @@ python3 validate_submission.py team_dilip.csv
 
 ---
 
-# 🎮 Sandbox App
+# Sandbox App
 
 A lightweight Gradio application is included.
 
@@ -487,7 +487,7 @@ python3 app.py
 
 ---
 
-# 📌 Tech Stack
+# Tech Stack
 
 * Python
 * Pandas
@@ -534,7 +534,7 @@ Top 100 finalists
 
 ---
 
-# 🏁 Conclusion
+# Conclusion
 
 Anyone can throw embeddings at a problem.
 
@@ -550,4 +550,4 @@ And perhaps that's the most interesting lesson of all.
 
 ---
 
-### Built for the Redrob India Runs Hackathon 🚀
+### Built for the Redrob India Runs Hackathon
