@@ -1,67 +1,92 @@
 import pandas as pd
 import sys
+import os
 
-def filter_candidates(input_path, output_path):
-    print(f"Loading data from {input_path}...")
+def filter_candidates(input_path, output_path, chunk_size=50000):
+    print(f"Loading data from {input_path} in chunks of {chunk_size}...")
 
-    df = pd.read_json(input_path, lines=True)
-    initial_count = len(df)
+    # Clear output file first if it exists so we can append cleanly
+    if os.path.exists(output_path):
+        os.remove(output_path)
 
-    df['yoe'] = [p.get('years_of_experience', 0) for p in df['profile']]
+    total_loaded = 0
+    total_honeypots = 0
+    total_service_traps = 0
+    total_title_traps = 0
+    total_dropped = 0
+    total_passed = 0
 
-    def get_max_grad(edu_list):
-        if isinstance(edu_list, list) and edu_list:
-            years = [e.get('end_year') for e in edu_list if e.get('end_year') is not None]
-            if years:
-                return max(years)
-        return 2026
+    # Stream the JSON Lines file in chunks to prevent memory crashes (OOM)
+    # This allows us to process 10 Lakh+ candidates seamlessly
+    for chunk_idx, df in enumerate(pd.read_json(input_path, lines=True, chunksize=chunk_size)):
+        chunk_count = len(df)
+        total_loaded += chunk_count
+        print(f"Processing chunk {chunk_idx + 1} ({total_loaded} candidates so far)...")
 
-    df['grad_year'] = [get_max_grad(edu) for edu in df['education']]
+        df['yoe'] = [p.get('years_of_experience', 0) for p in df['profile']]
 
-    company_lists = [
-        [c.get('company', '').lower() for c in (hist if isinstance(hist, list) else [])]
-        for hist in df['career_history']
-    ]
+        def get_max_grad(edu_list):
+            if isinstance(edu_list, list) and edu_list:
+                years = [e.get('end_year') for e in edu_list if e.get('end_year') is not None]
+                if years:
+                    return max(years)
+            return 2026
 
-    timeline_anomaly_mask = df['yoe'] > (2026 - df['grad_year'] + 1)
+        df['grad_year'] = [get_max_grad(edu) for edu in df['education']]
 
-    service_firms = {"tcs", "infosys", "wipro", "cognizant", "accenture", "capgemini", "deloitte", "hcl"}
+        company_lists = [
+            [c.get('company', '').lower() for c in (hist if isinstance(hist, list) else [])]
+            for hist in df['career_history']
+        ]
 
-    def is_service_only(companies):
-        if not companies:
-            return False
-        return all(any(sf in c for sf in service_firms) for c in companies)
+        timeline_anomaly_mask = df['yoe'] > (2026 - df['grad_year'] + 1)
 
-    service_only_mask = [is_service_only(comps) for comps in company_lists]
-    service_filter_mask = (df['yoe'] >= 5) & pd.Series(service_only_mask)
+        service_firms = {"tcs", "infosys", "wipro", "cognizant", "accenture", "capgemini", "deloitte", "hcl"}
 
-    forbidden_titles = {
-        "marketing", "sales", "hr", "recruiter", "content writer",
-        "operations manager", "accountant", "customer support",
-        "business analyst", "mechanical engineer", "civil engineer",
-        "graphic designer", "project manager"
-    }
+        def is_service_only(companies):
+            if not companies:
+                return False
+            return all(any(sf in c for sf in service_firms) for c in companies)
 
-    def is_forbidden_role(title):
-        title_lower = str(title).lower()
-        return any(bad_word in title_lower for bad_word in forbidden_titles)
+        service_only_mask = [is_service_only(comps) for comps in company_lists]
+        service_filter_mask = (df['yoe'] >= 5) & pd.Series(service_only_mask, index=df.index)
 
-    title_trap_mask = df['profile'].apply(lambda p: is_forbidden_role(p.get('current_title', '')))
+        forbidden_titles = {
+            "marketing", "sales", "hr", "recruiter", "content writer",
+            "operations manager", "accountant", "customer support",
+            "business analyst", "mechanical engineer", "civil engineer",
+            "graphic designer", "project manager"
+        }
 
-    bad_rows = timeline_anomaly_mask | service_filter_mask | title_trap_mask
-    clean_df = df[~bad_rows].copy()
+        def is_forbidden_role(title):
+            title_lower = str(title).lower()
+            return any(bad_word in title_lower for bad_word in forbidden_titles)
+
+        title_trap_mask = df['profile'].apply(lambda p: is_forbidden_role(p.get('current_title', '')))
+
+        bad_rows = timeline_anomaly_mask | service_filter_mask | title_trap_mask
+        clean_df = df[~bad_rows].copy()
+
+        # Update running stats
+        total_honeypots += timeline_anomaly_mask.sum()
+        total_service_traps += service_filter_mask.sum()
+        total_title_traps += title_trap_mask.sum()
+        total_dropped += bad_rows.sum()
+        total_passed += len(clean_df)
+
+        clean_df = clean_df.drop(columns=['yoe', 'grad_year'])
+        
+        # Append this chunk to the output file
+        clean_df.to_json(output_path, orient='records', lines=True, mode='a')
 
     print("\n--- STAGE 1 EXECUTION STATS ---")
-    print(f"Total Candidates Loaded:  {initial_count}")
-    print(f"Honeypots Caught:         {timeline_anomaly_mask.sum()}")
-    print(f"Service Traps Caught:     {service_filter_mask.sum()}")
-    print(f"Title Traps Caught:       {title_trap_mask.sum()}")
-    print(f"Total Dropped:            {bad_rows.sum()}")
-    print(f"Remaining for Stage 2:    {len(clean_df)}")
+    print(f"Total Candidates Loaded:  {total_loaded}")
+    print(f"Honeypots Caught:         {total_honeypots}")
+    print(f"Service Traps Caught:     {total_service_traps}")
+    print(f"Title Traps Caught:       {total_title_traps}")
+    print(f"Total Dropped:            {total_dropped}")
+    print(f"Remaining for Stage 2:    {total_passed}")
     print("-------------------------------")
-
-    clean_df = clean_df.drop(columns=['yoe', 'grad_year'])
-    clean_df.to_json(output_path, orient='records', lines=True)
     print(f"Filtered dataset saved to {output_path}")
 
 if __name__ == "__main__":
