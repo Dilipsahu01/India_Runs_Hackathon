@@ -2,7 +2,7 @@ import pandas as pd
 import sys
 import os
 
-def filter_candidates(input_path, output_path, chunk_size=50000):
+def filter_candidates(input_path, output_path, chunk_size=100000):
     print(f"Loading data from {input_path} in chunks of {chunk_size}...")
 
     # Clear output file first if it exists so we can append cleanly
