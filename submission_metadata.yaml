@@ -52,7 +52,7 @@ ai_usage_summary: |
 # ============================================================================
 methodology_summary: |
   We utilized a highly optimized, 3-stage funnel architecture to meet the strict CPU and 5-minute compute limits. 
-  Stage 1: A vectorized Pandas filter to instantly remove honeypot timeline anomalies and purely service-firm-trap candidates.
+  Stage 1: A vectorized Pandas filter to instantly remove timeline anomalies, service-firm traps, and title-mismatch honeypots (a strict blocklist to aggressively filter out non-technical roles like 'Marketing Manager' or 'Graphic Designer').
   Stage 2: A fast Lexical search using BM25 Okapi to score and extract the top 500 candidates based on a targeted JD keyword query, neutralizing compute constraints.
   Stage 3: A dense semantic vector ranking on the remaining 500 candidates using the lightweight all-MiniLM-L6-v2 SentenceTransformer. The final composite score was calculated using 40% semantic similarity, 30% strict experience range matching, and 30% behavioral signal modifier (recruiter response rate + login recency). Tie-breaks were handled by rounding before sorting.
 
