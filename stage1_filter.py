@@ -46,14 +46,30 @@ def filter_candidates(input_path, output_path):
     # Apply rule: Must have 5+ years experience AND purely service firm background
     service_filter_mask = (df['yoe'] >= 5) & pd.Series(service_only_mask)
     
+    # 4.5. Title-to-Keyword Mismatch (The Honeypot Nuke)
+    # A strict blacklist of job titles that have no business building production AI systems
+    forbidden_titles = {
+        "marketing", "sales", "hr", "recruiter", "content writer", 
+        "operations manager", "accountant", "customer support", 
+        "business analyst", "mechanical engineer", "civil engineer", 
+        "graphic designer", "project manager"
+    }
+    
+    def is_forbidden_role(title):
+        title_lower = str(title).lower()
+        return any(bad_word in title_lower for bad_word in forbidden_titles)
+        
+    title_trap_mask = df['profile'].apply(lambda p: is_forbidden_role(p.get('current_title', '')))
+    
     # 5. Apply filters and save
-    bad_rows = timeline_anomaly_mask | service_filter_mask
+    bad_rows = timeline_anomaly_mask | service_filter_mask | title_trap_mask
     clean_df = df[~bad_rows].copy()
     
     print("\n--- STAGE 1 EXECUTION STATS ---")
     print(f"Total Candidates Loaded:  {initial_count}")
     print(f"Honeypots Caught:         {timeline_anomaly_mask.sum()}")
     print(f"Service Traps Caught:     {service_filter_mask.sum()}")
+    print(f"Title Traps Caught:       {title_trap_mask.sum()}")
     print(f"Total Dropped:            {bad_rows.sum()}")
     print(f"Remaining for Stage 2:    {len(clean_df)}")
     print("-------------------------------")
