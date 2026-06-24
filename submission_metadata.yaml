@@ -1,0 +1,67 @@
+# Redrob Hackathon — Submission Metadata Template
+
+# ============================================================================
+# Team identity
+# ============================================================================
+team_name: "Dilip Sahu Team"  
+
+primary_contact:
+  name: "Dilip Sahu"
+  email: "dilip.sahu@example.com"
+  phone: "+91-XXXXXXXXXX"        
+
+team_members:
+  - name: "Dilip Sahu"
+    email: "dilip.sahu@example.com"
+    role: "ML Engineer"
+
+# ============================================================================
+# Code and reproducibility
+# ============================================================================
+github_repo: "https://github.com/Dilipsahu01/India_Runs_Hackathon"
+
+sandbox_link: "https://huggingface.co/spaces/Dilipsahu01/redrob-ranker"
+
+reproduce_command: "python3 stage1_filter.py candidates.jsonl stage1_passed.jsonl && python3 stage2_bm25.py stage1_passed.jsonl stage2_passed.jsonl && python3 stage3_semantic_ranker.py stage2_passed.jsonl team_dilip.csv"
+
+# ============================================================================
+# Compute environment
+# ============================================================================
+compute:
+  platform: "Local Linux box"
+  cpu_cores: 8
+  ram_gb: 16
+  python_version: "3.12"
+  os: "Ubuntu 22.04 LTS"
+  uses_gpu_for_inference: false
+  has_network_during_ranking: false
+  pre_computation_required: false
+  pre_computation_time_minutes: 0
+
+# ============================================================================
+# AI tools declaration
+# ============================================================================
+ai_tools_used:
+  - "Gemini" 
+
+ai_usage_summary: |
+  Used Gemini to design and validate the 3-stage ranking pipeline, optimize pandas operations, and structure the hackathon deliverables. No candidate data was fed to the LLM during ranking.
+
+# ============================================================================
+# Approach summary (optional but recommended)
+# ============================================================================
+methodology_summary: |
+  We utilized a highly optimized, 3-stage funnel architecture to meet the strict CPU and 5-minute compute limits. 
+  Stage 1: A vectorized Pandas filter to instantly remove honeypot timeline anomalies and purely service-firm-trap candidates.
+  Stage 2: A fast Lexical search using BM25 Okapi to score and extract the top 500 candidates based on a targeted JD keyword query, neutralizing compute constraints.
+  Stage 3: A dense semantic vector ranking on the remaining 500 candidates using the lightweight all-MiniLM-L6-v2 SentenceTransformer. The final composite score was calculated using 40% semantic similarity, 30% strict experience range matching, and 30% behavioral signal modifier (recruiter response rate + login recency). Tie-breaks were handled by rounding before sorting.
+
+# ============================================================================
+# Declarations
+# ============================================================================
+declarations:
+  read_submission_spec: true        
+  code_is_original_work: true       
+  no_collusion: true                
+  honeypot_check_done: true         
+  reproduction_tested: true         
