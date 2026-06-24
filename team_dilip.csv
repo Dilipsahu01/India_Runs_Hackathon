@@ -1,0 +1,101 @@
+candidate_id,rank,score,reasoning
+CAND_0071974,1,0.8703,Senior AI Engineer with 7.8 yrs; 19 skills (8 JD-relevant incl. Weaviate; Pinecone; Machine Learning); response rate 0.76; GitHub 82.8/100.
+CAND_0002025,2,0.8495,Senior AI Engineer with 5.9 yrs; 20 skills (9 JD-relevant incl. FAISS; TensorFlow; Weaviate); response rate 0.80; GitHub 96.9/100.
+CAND_0046525,3,0.8431,Senior Machine Learning Engineer with 6.1 yrs; 17 skills (7 JD-relevant incl. LangChain; Machine Learning; LlamaIndex); response rate 0.88; GitHub 36.7/100.
+CAND_0086022,4,0.8428,Senior Applied Scientist with 5.3 yrs; 19 skills (8 JD-relevant incl. Deep Learning; Pinecone; Embeddings); response rate 0.55; GitHub 75.2/100.
+CAND_0088025,5,0.8427,Staff Machine Learning Engineer with 8.6 yrs; 19 skills (8 JD-relevant incl. Pinecone; Hugging Face Transformers; RAG); response rate 0.83; GitHub 74.6/100.
+CAND_0011687,6,0.8314,Senior NLP Engineer with 7.8 yrs; 13 skills (8 JD-relevant incl. TensorFlow; FAISS; Embeddings); response rate 0.89; GitHub 76.3/100.
+CAND_0029367,7,0.827,Senior Data Scientist with 5.7 yrs; 17 skills (8 JD-relevant incl. TensorFlow; FAISS; Sentence Transformers); response rate 0.77; GitHub 39.8/100.
+CAND_0089552,8,0.8076,Machine Learning Engineer with 6.0 yrs; 19 skills (6 JD-relevant incl. Weaviate; TensorFlow; Qdrant); response rate 0.49; GitHub 38.4/100.
+CAND_0068351,9,0.8069,Lead AI Engineer with 6.4 yrs; 19 skills (5 JD-relevant incl. Deep Learning; Qdrant; Python); response rate 0.86; no GitHub linked.
+CAND_0065195,10,0.8064,Search Engineer with 5.1 yrs; 13 skills (4 JD-relevant incl. Hugging Face Transformers; Qdrant; MLOps); response rate 0.80; GitHub 87.3/100.
+CAND_0030031,11,0.8047,AI Engineer with 5.7 yrs; 16 skills (5 JD-relevant incl. PyTorch; Python; NLP); response rate 0.94; GitHub 32.4/100.
+CAND_0083307,12,0.8039,Search Engineer with 7.8 yrs; 18 skills (5 JD-relevant incl. Embeddings; Pinecone; Weaviate); response rate 0.70; GitHub 69.2/100.
+CAND_0074735,13,0.7974,Applied ML Engineer with 5.5 yrs; 20 skills (5 JD-relevant incl. RAG; LlamaIndex; Machine Learning); response rate 0.77; GitHub 87.7/100.
+CAND_0084819,14,0.7932,Search Engineer with 4.5 yrs; 17 skills (6 JD-relevant incl. MLOps; LlamaIndex; Docker); response rate 0.74; GitHub 55.6/100.
+CAND_0053591,15,0.7901,AI Engineer with 5.3 yrs; 14 skills (5 JD-relevant incl. LangChain; Embeddings; Sentence Transformers); response rate 0.81; GitHub 75.8/100.
+CAND_0042029,16,0.7878,Senior Data Scientist with 6.5 yrs; 18 skills (7 JD-relevant incl. PyTorch; NLP; RAG); response rate 0.67; GitHub 78.7/100.
+CAND_0081846,17,0.7851,Lead AI Engineer with 6.7 yrs; 18 skills (7 JD-relevant incl. LlamaIndex; PyTorch; Deep Learning); response rate 0.73; GitHub 33.7/100.
+CAND_0044855,18,0.7842,Senior Data Scientist with 6.6 yrs; 17 skills (6 JD-relevant incl. Hugging Face Transformers; Pinecone; Machine Learning); response rate 0.57; GitHub 46.7/100.
+CAND_0049896,19,0.7816,Search Engineer with 7.3 yrs; 16 skills (6 JD-relevant incl. LangChain; LlamaIndex; Sentence Transformers); response rate 0.43; no GitHub linked.
+CAND_0077337,20,0.7802,Staff Machine Learning Engineer with 7.0 yrs; 20 skills (6 JD-relevant incl. Pinecone; RAG; Qdrant); response rate 0.95; GitHub 68.0/100.
+CAND_0015578,21,0.7768,AI Engineer with 5.4 yrs; 18 skills (7 JD-relevant incl. Embeddings; NLP; Machine Learning); response rate 0.65; GitHub 27.7/100.
+CAND_0045250,22,0.7767,Applied ML Engineer with 6.6 yrs; 17 skills (6 JD-relevant incl. Sentence Transformers; Embeddings; NLP); response rate 0.74; no GitHub linked.
+CAND_0008425,23,0.7755,Senior NLP Engineer with 7.8 yrs; 17 skills (6 JD-relevant incl. Qdrant; Sentence Transformers; NLP); response rate 0.66; GitHub 53.3/100.
+CAND_0098454,24,0.7748,AI Specialist with 6.6 yrs; 14 skills (5 JD-relevant incl. MLOps; NLP; Pinecone); response rate 0.87; GitHub 28.7/100.
+CAND_0036184,25,0.7735,Recommendation Systems Engineer with 6.0 yrs; 19 skills (8 JD-relevant incl. FAISS; MLOps; Hugging Face Transformers); response rate 0.90; GitHub 43.2/100.
+CAND_0037566,26,0.773,Machine Learning Engineer with 6.9 yrs; 17 skills (5 JD-relevant incl. Pinecone; LlamaIndex; NLP); response rate 0.50; GitHub 73.4/100.
+CAND_0094056,27,0.7715,NLP Engineer with 5.9 yrs; 18 skills (6 JD-relevant incl. Pinecone; Hugging Face Transformers; LlamaIndex); response rate 0.82; GitHub 64.8/100.
+CAND_0042506,28,0.77,Search Engineer with 4.2 yrs; 19 skills (5 JD-relevant incl. TensorFlow; Deep Learning; Qdrant); response rate 0.48; GitHub 64.0/100.
+CAND_0099806,29,0.7678,AI Engineer with 4.6 yrs; 18 skills (6 JD-relevant incl. RAG; FAISS; Embeddings); response rate 0.76; GitHub 86.9/100.
+CAND_0069905,30,0.7676,Applied ML Engineer with 6.6 yrs; 17 skills (7 JD-relevant incl. Sentence Transformers; LangChain; TensorFlow); response rate 0.78; GitHub 44.8/100.
+CAND_0062247,31,0.767,AI Engineer with 7.3 yrs; 17 skills (5 JD-relevant incl. Pinecone; Qdrant; RAG); response rate 0.78; GitHub 52.7/100.
+CAND_0005260,32,0.7659,Senior NLP Engineer with 5.2 yrs; 18 skills (7 JD-relevant incl. MLOps; Deep Learning; Python); response rate 0.86; no GitHub linked.
+CAND_0054123,33,0.7634,Applied ML Engineer with 4.7 yrs; 15 skills (5 JD-relevant incl. LangChain; Python; Weaviate); response rate 0.87; GitHub 71.5/100.
+CAND_0070398,34,0.7612,Machine Learning Engineer with 7.2 yrs; 16 skills (5 JD-relevant incl. RAG; FAISS; Embeddings); response rate 0.60; GitHub 63.1/100.
+CAND_0093193,35,0.7578,Senior Machine Learning Engineer with 7.9 yrs; 19 skills (3 JD-relevant incl. Qdrant; TensorFlow; Machine Learning); response rate 0.61; GitHub 34.2/100.
+CAND_0081686,36,0.7551,Search Engineer with 6.0 yrs; 18 skills (6 JD-relevant incl. Machine Learning; Embeddings; FAISS); response rate 0.91; GitHub 46.4/100.
+CAND_0055905,37,0.7526,Senior Machine Learning Engineer with 8.1 yrs; 13 skills (4 JD-relevant incl. Hugging Face Transformers; LangChain; Python); response rate 0.87; no GitHub linked.
+CAND_0078042,38,0.751,Applied ML Engineer with 4.7 yrs; 14 skills (4 JD-relevant incl. PyTorch; Sentence Transformers; NLP); response rate 0.91; GitHub 83.6/100.
+CAND_0096172,39,0.751,NLP Engineer with 5.2 yrs; 15 skills (6 JD-relevant incl. LangChain; Python; RAG); response rate 0.47; GitHub 65.0/100.
+CAND_0095528,40,0.7487,Senior Data Scientist with 5.3 yrs; 15 skills (5 JD-relevant incl. PyTorch; Qdrant; Python); response rate 0.55; no GitHub linked.
+CAND_0098846,41,0.7486,AI Engineer with 7.6 yrs; 18 skills (6 JD-relevant incl. Hugging Face Transformers; Machine Learning; MLOps); response rate 0.62; GitHub 86.2/100.
+CAND_0064904,42,0.7482,AI Engineer with 4.9 yrs; 16 skills (6 JD-relevant incl. Embeddings; Hugging Face Transformers; Python); response rate 0.78; GitHub 59.0/100.
+CAND_0037944,43,0.7476,Senior Data Scientist with 4.9 yrs; 18 skills (6 JD-relevant incl. Machine Learning; Embeddings; Python); response rate 0.42; GitHub 83.0/100.
+CAND_0061265,44,0.7475,Recommendation Systems Engineer with 6.6 yrs; 16 skills (4 JD-relevant incl. Qdrant; LangChain; Hugging Face Transformers); response rate 0.94; GitHub 79.8/100.
+CAND_0049538,45,0.7437,Applied ML Engineer with 5.8 yrs; 17 skills (4 JD-relevant incl. LlamaIndex; Embeddings; Deep Learning); response rate 0.72; GitHub 90.8/100.
+CAND_0081852,46,0.743,Senior Data Scientist with 5.9 yrs; 14 skills (2 JD-relevant incl. Weaviate; MLOps); response rate 0.44; GitHub 87.9/100.
+CAND_0099401,47,0.7398,NLP Engineer with 7.7 yrs; 14 skills (5 JD-relevant incl. Embeddings; Deep Learning; Qdrant); response rate 0.42; GitHub 24.1/100.
+CAND_0018722,48,0.7392,Recommendation Systems Engineer with 6.6 yrs; 14 skills (4 JD-relevant incl. Weaviate; Python; TensorFlow); response rate 0.79; GitHub 94.3/100.
+CAND_0052328,49,0.7381,Recommendation Systems Engineer with 6.5 yrs; 16 skills (2 JD-relevant incl. Sentence Transformers; Python); response rate 0.79; GitHub 77.6/100.
+CAND_0096142,50,0.7366,Applied ML Engineer with 5.0 yrs; 15 skills (6 JD-relevant incl. Weaviate; Pinecone; Python); response rate 0.84; GitHub 80.5/100.
+CAND_0049771,51,0.7355,AI Research Engineer with 5.0 yrs; 13 skills (4 JD-relevant incl. Python; PyTorch; MLOps); response rate 0.81; GitHub 62.9/100.
+CAND_0051004,52,0.7329,Senior Data Scientist with 4.7 yrs; 20 skills (6 JD-relevant incl. Embeddings; PyTorch; Docker); response rate 0.41; GitHub 30.8/100.
+CAND_0078002,53,0.7319,Machine Learning Engineer with 6.3 yrs; 16 skills (7 JD-relevant incl. TensorFlow; NLP; Hugging Face Transformers); response rate 0.86; GitHub 50.6/100.
+CAND_0028527,54,0.7316,AI Specialist with 5.4 yrs; 17 skills (4 JD-relevant incl. LangChain; Qdrant; NLP); response rate 0.90; GitHub 13.4/100.
+CAND_0015528,55,0.731,Applied ML Engineer with 7.4 yrs; 17 skills (6 JD-relevant incl. Docker; Weaviate; LangChain); response rate 0.53; GitHub 50.6/100.
+CAND_0050454,56,0.7274,AI Engineer with 6.8 yrs; 15 skills (5 JD-relevant incl. PyTorch; LangChain; FAISS); response rate 0.77; no GitHub linked.
+CAND_0006418,57,0.7271,Machine Learning Engineer with 5.7 yrs; 16 skills (5 JD-relevant incl. Kubernetes; Embeddings; TensorFlow); response rate 0.92; GitHub 59.7/100.
+CAND_0010685,58,0.7257,NLP Engineer with 6.7 yrs; 16 skills (5 JD-relevant incl. LlamaIndex; Deep Learning; PyTorch); response rate 0.83; no GitHub linked.
+CAND_0012957,59,0.7252,Search Engineer with 4.9 yrs; 15 skills (7 JD-relevant incl. RAG; LangChain; Deep Learning); response rate 0.67; GitHub 53.5/100.
+CAND_0043228,60,0.7203,Applied ML Engineer with 6.8 yrs; 18 skills (5 JD-relevant incl. NLP; Hugging Face Transformers; Machine Learning); response rate 0.41; GitHub 47.6/100.
+CAND_0007460,61,0.7181,AI Engineer with 4.7 yrs; 18 skills (5 JD-relevant incl. LangChain; Embeddings; Weaviate); response rate 0.48; GitHub 53.2/100.
+CAND_0068811,62,0.7181,Applied ML Engineer with 8.0 yrs; 19 skills (5 JD-relevant incl. Qdrant; TensorFlow; Embeddings); response rate 0.42; GitHub 23.1/100.
+CAND_0011162,63,0.7179,Recommendation Systems Engineer with 5.8 yrs; 17 skills (7 JD-relevant incl. FAISS; LangChain; Sentence Transformers); response rate 0.75; GitHub 34.3/100.
+CAND_0061175,64,0.7149,AI Research Engineer with 6.7 yrs; 13 skills (5 JD-relevant incl. Python; LlamaIndex; MLOps); response rate 0.48; GitHub 49.8/100.
+CAND_0000031,65,0.7145,Recommendation Systems Engineer with 6.0 yrs; 17 skills (7 JD-relevant incl. FAISS; Pinecone; Machine Learning); response rate 0.91; GitHub 32.6/100.
+CAND_0005649,66,0.7131,Senior Data Scientist with 7.4 yrs; 17 skills (4 JD-relevant incl. Deep Learning; TensorFlow; Weaviate); response rate 0.57; GitHub 80.7/100.
+CAND_0022812,67,0.7102,Applied ML Engineer with 4.5 yrs; 19 skills (8 JD-relevant incl. Weaviate; Pinecone; Qdrant); response rate 0.79; no GitHub linked.
+CAND_0077067,68,0.71,AI Specialist with 5.4 yrs; 14 skills (3 JD-relevant incl. Python; Pinecone; TensorFlow); response rate 0.83; GitHub 24.8/100.
+CAND_0040887,69,0.7084,Machine Learning Engineer with 4.7 yrs; 12 skills (4 JD-relevant incl. FAISS; LangChain; Python); response rate 0.84; GitHub 34.2/100.
+CAND_0030784,70,0.7062,Data Scientist with 4.4 yrs; 14 skills (5 JD-relevant incl. Embeddings; RAG; Pinecone); response rate 0.90; GitHub 31.7/100.
+CAND_0030348,71,0.705,Machine Learning Engineer with 4.5 yrs; 16 skills (6 JD-relevant incl. LlamaIndex; Deep Learning; MLOps); response rate 0.54; no GitHub linked.
+CAND_0081053,72,0.7034,NLP Engineer with 5.4 yrs; 17 skills (3 JD-relevant incl. Qdrant; Machine Learning; Weaviate); response rate 0.83; GitHub 77.7/100.
+CAND_0016163,73,0.7025,Applied ML Engineer with 6.7 yrs; 17 skills (7 JD-relevant incl. Hugging Face Transformers; Weaviate; Deep Learning); response rate 0.72; GitHub 95.0/100.
+CAND_0015582,74,0.7021,ML Engineer with 4.4 yrs; 20 skills (8 JD-relevant incl. Qdrant; Sentence Transformers; Embeddings); response rate 0.82; no GitHub linked.
+CAND_0014858,75,0.7018,AI Research Engineer with 4.9 yrs; 17 skills (4 JD-relevant incl. Sentence Transformers; LangChain; FAISS); response rate 0.30; GitHub 64.5/100.
+CAND_0032807,76,0.6998,Machine Learning Engineer with 4.2 yrs; 18 skills (5 JD-relevant incl. Python; Deep Learning; Sentence Transformers); response rate 0.51; GitHub 28.8/100.
+CAND_0079064,77,0.6991,Senior Data Scientist with 5.2 yrs; 14 skills (3 JD-relevant incl. LlamaIndex; NLP; Pinecone); response rate 0.91; GitHub 26.8/100.
+CAND_0041611,78,0.6981,Staff Machine Learning Engineer with 6.4 yrs; 18 skills (9 JD-relevant incl. LlamaIndex; PyTorch; Qdrant); response rate 0.07; no GitHub linked.
+CAND_0052706,79,0.698,AI Research Engineer with 5.1 yrs; 16 skills (4 JD-relevant incl. Pinecone; Deep Learning; Weaviate); response rate 0.79; no GitHub linked.
+CAND_0030468,80,0.6979,Senior Applied Scientist with 5.4 yrs; 14 skills (2 JD-relevant incl. TensorFlow; Machine Learning); response rate 0.78; GitHub 45.0/100.
+CAND_0094728,81,0.6979,AI Specialist with 6.5 yrs; 14 skills (3 JD-relevant incl. RAG; Qdrant; Embeddings); response rate 0.48; GitHub 68.1/100.
+CAND_0041568,82,0.6976,Search Engineer with 5.2 yrs; 18 skills (6 JD-relevant incl. Weaviate; TensorFlow; Hugging Face Transformers); response rate 0.52; no GitHub linked.
+CAND_0004972,83,0.6963,ML Engineer with 6.0 yrs; 16 skills (4 JD-relevant incl. RAG; PyTorch; MLOps); response rate 0.74; GitHub 31.5/100.
+CAND_0043860,84,0.6959,Junior ML Engineer with 6.1 yrs; 14 skills (3 JD-relevant incl. Deep Learning; Qdrant; PyTorch); response rate 0.81; no GitHub linked.
+CAND_0000165,85,0.6958,AI Specialist with 6.8 yrs; 14 skills (2 JD-relevant incl. Qdrant; Sentence Transformers); response rate 0.30; GitHub 61.5/100.
+CAND_0057736,86,0.6952,Computer Vision Engineer with 6.2 yrs; 13 skills (5 JD-relevant incl. Weaviate; Qdrant; Hugging Face Transformers); response rate 0.92; no GitHub linked.
+CAND_0070202,87,0.6928,Machine Learning Engineer with 5.1 yrs; 15 skills (5 JD-relevant incl. Embeddings; Qdrant; PyTorch); response rate 0.60; no GitHub linked.
+CAND_0053695,88,0.6916,Recommendation Systems Engineer with 5.8 yrs; 15 skills (6 JD-relevant incl. MLOps; Pinecone; LangChain); response rate 0.60; GitHub 67.6/100.
+CAND_0032270,89,0.6913,Data Scientist with 4.4 yrs; 13 skills (5 JD-relevant incl. Python; Qdrant; Embeddings); response rate 0.64; GitHub 84.9/100.
+CAND_0073883,90,0.6899,AI Specialist with 5.3 yrs; 18 skills (4 JD-relevant incl. Hugging Face Transformers; Deep Learning; Python); response rate 0.92; GitHub 65.6/100.
+CAND_0060072,91,0.6898,Staff Machine Learning Engineer with 5.7 yrs; 20 skills (8 JD-relevant incl. Deep Learning; Sentence Transformers; PyTorch); response rate 0.10; GitHub 82.4/100.
+CAND_0075439,92,0.6898,Machine Learning Engineer with 4.3 yrs; 12 skills (1 JD-relevant incl. Embeddings); response rate 0.56; GitHub 66.3/100.
+CAND_0012632,93,0.6889,AI Specialist with 6.0 yrs; 13 skills (5 JD-relevant incl. MLOps; Python; Pinecone); response rate 0.53; GitHub 70.9/100.
+CAND_0036437,94,0.6886,Search Engineer with 4.8 yrs; 12 skills (3 JD-relevant incl. Sentence Transformers; Weaviate; FAISS); response rate 0.87; GitHub 35.2/100.
+CAND_0093401,95,0.6866,AI Specialist with 6.0 yrs; 12 skills (4 JD-relevant incl. LangChain; Embeddings; Machine Learning); response rate 0.85; GitHub 51.9/100.
+CAND_0030827,96,0.686,Senior Data Scientist with 5.4 yrs; 16 skills (7 JD-relevant incl. Hugging Face Transformers; NLP; FAISS); response rate 0.52; GitHub 52.4/100.
+CAND_0075249,97,0.6852,Applied ML Engineer with 6.2 yrs; 14 skills (3 JD-relevant incl. Sentence Transformers; Machine Learning; Pinecone); response rate 0.82; GitHub 36.8/100.
+CAND_0010541,98,0.685,AI Research Engineer with 6.2 yrs; 16 skills (6 JD-relevant incl. Pinecone; Weaviate; MLOps); response rate 0.59; GitHub 18.2/100.
+CAND_0077261,99,0.6842,AI Specialist with 5.7 yrs; 17 skills (3 JD-relevant incl. Hugging Face Transformers; RAG; TensorFlow); response rate 0.81; GitHub 38.4/100.
+CAND_0074648,100,0.6835,AI Research Engineer with 4.1 yrs; 16 skills (7 JD-relevant incl. PyTorch; LangChain; Sentence Transformers); response rate 0.82; no GitHub linked.

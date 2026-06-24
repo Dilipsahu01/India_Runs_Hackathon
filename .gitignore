@@ -1,0 +1,8 @@
+venv/
+candidates.jsonl
+stage1_passed.jsonl
+stage2_passed.jsonl
+__pycache__/
+*.pyc
+*.docx
+*.pptx
