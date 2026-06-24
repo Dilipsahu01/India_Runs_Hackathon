@@ -5,7 +5,6 @@ import os
 def filter_candidates(input_path, output_path, chunk_size=100000):
     print(f"Loading data from {input_path} in chunks of {chunk_size}...")
 
-    # Clear output file first if it exists so we can append cleanly
     if os.path.exists(output_path):
         os.remove(output_path)
 
@@ -16,8 +15,6 @@ def filter_candidates(input_path, output_path, chunk_size=100000):
     total_dropped = 0
     total_passed = 0
 
-    # Stream the JSON Lines file in chunks to prevent memory crashes (OOM)
-    # This allows us to process 10 Lakh+ candidates seamlessly
     for chunk_idx, df in enumerate(pd.read_json(input_path, lines=True, chunksize=chunk_size)):
         chunk_count = len(df)
         total_loaded += chunk_count
@@ -67,7 +64,6 @@ def filter_candidates(input_path, output_path, chunk_size=100000):
         bad_rows = timeline_anomaly_mask | service_filter_mask | title_trap_mask
         clean_df = df[~bad_rows].copy()
 
-        # Update running stats
         total_honeypots += timeline_anomaly_mask.sum()
         total_service_traps += service_filter_mask.sum()
         total_title_traps += title_trap_mask.sum()
@@ -76,7 +72,6 @@ def filter_candidates(input_path, output_path, chunk_size=100000):
 
         clean_df = clean_df.drop(columns=['yoe', 'grad_year'])
         
-        # Append this chunk to the output file
         clean_df.to_json(output_path, orient='records', lines=True, mode='a')
 
     print("\n--- STAGE 1 EXECUTION STATS ---")
