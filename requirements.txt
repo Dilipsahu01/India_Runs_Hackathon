@@ -2,4 +2,4 @@ pandas
 rank_bm25
 sentence-transformers
 scikit-learn
-streamlit
+gradio
