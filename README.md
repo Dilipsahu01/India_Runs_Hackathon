@@ -39,7 +39,7 @@ And one goal:
 
 Sounds straightforward.
 
-Until you realize that running semantic embeddings on 100,000 resumes would take **30–60 minutes**.
+Until you realize that running semantic embeddings on 100,000 resumes would take **30-60 minutes**.
 
 Which means...
 
@@ -85,32 +85,32 @@ Eliminate using cheap mathematics.
 
 ```text
 100,000 Candidates
-        │
-        ▼
-┌───────────────────┐
-│ Stage 1           │
-│ Heuristic Filters │
-└───────────────────┘
-        │
-        ▼
+        |
+        v
++-------------------+
+| Stage 1           |
+| Heuristic Filters |
++-------------------+
+        |
+        v
 ~27,000 Candidates
-        │
-        ▼
-┌───────────────────┐
-│ Stage 2           │
-│ BM25 Search       │
-└───────────────────┘
-        │
-        ▼
+        |
+        v
++-------------------+
+| Stage 2           |
+| BM25 Search       |
++-------------------+
+        |
+        v
 Top 500 Candidates
-        │
-        ▼
-┌───────────────────┐
-│ Stage 3           │
-│ Semantic Ranking  │
-└───────────────────┘
-        │
-        ▼
+        |
+        v
++-------------------+
+| Stage 3           |
+| Semantic Ranking  |
++-------------------+
+        |
+        v
 Top 100 Candidates
 ```
 
@@ -124,7 +124,7 @@ Production-grade.
 
 ---
 
-# Stage 1 — The Honeypot Nuke
+# Stage 1 -- The Honeypot Nuke
 
 Before AI touches anything...
 
@@ -148,7 +148,7 @@ Some profiles looked like this:
 
 > "I work with ChatGPT, RAG, embeddings, vector databases and AI systems..."
 
-A naïve semantic model sees:
+A naive semantic model sees:
 
 ```
 ChatGPT [Matched]
@@ -200,7 +200,7 @@ The AI never even sees them.
 
 ---
 
-# Stage 1.5 — Time Travelers Don't Exist
+# Stage 1.5 -- Time Travelers Don't Exist
 
 Another trap.
 
@@ -219,10 +219,8 @@ Apparently they started coding professionally in middle school.
 
 Our vectorized Pandas checks compare:
 
-```python
-Max Graduation Year
-vs
-Claimed Experience
+```
+Max Graduation Year vs Claimed Experience
 ```
 
 Impossible combinations?
@@ -248,13 +246,13 @@ If a candidate's entire history consisted only of:
 
 they were automatically filtered.
 
-Because matching the job description means understanding intent—
+Because matching the job description means understanding intent--
 
 not just keywords.
 
 ---
 
-# Stage 2 — The Compute Neutralizer
+# Stage 2 -- The Compute Neutralizer
 
 Here's a question:
 
@@ -295,15 +293,9 @@ in only a few seconds.
 ### Query Keywords
 
 ```text
-python
-embedding
-retrieval
-rag
-sentencetransformers
-pinecone
-qdrant
-vector databases
-llm
+python, embedding, retrieval, rag,
+sentencetransformers, pinecone, qdrant,
+vector databases, llm
 ```
 
 Cheap compute.
@@ -312,7 +304,7 @@ Massive impact.
 
 ---
 
-# Stage 3 — Where AI Finally Enters
+# Stage 3 -- Where AI Finally Enters
 
 Only now...
 
@@ -322,7 +314,7 @@ do we spend semantic compute.
 
 Using:
 
-```python
+```
 all-MiniLM-L6-v2
 ```
 
@@ -334,47 +326,90 @@ Reliable.
 
 ---
 
-## Our Scoring Matrix
+## But We Didn't Stop At Cosine Similarity
 
-Real recruiters don't hire using cosine similarity alone.
+Most pipelines would embed the text, calculate similarity, and call it a day.
 
-Neither do we.
+We didn't.
+
+Because real recruiters don't hire based on text similarity alone.
 
 ---
 
-### 40% Semantic Match
+## The Multi-Signal Scoring Matrix
+
+We built a composite scoring engine that fuses four independent signals:
+
+---
+
+### 30% Semantic Match
 
 How closely does the profile resemble the ideal candidate?
 
+We embed each candidate's title, skills, headline, summary, and **current role description** into a dense vector and compare it against the JD.
+
+Not just title and summary.
+
+The actual work they're doing today.
+
 ---
 
-### 30% Experience Match
+### 25% Experience Match
 
 The sweet spot:
 
 ```
-5–9 Years
+5-9 Years
 ```
 
-Outside that range?
+But we don't use a gentle slope.
 
-Heavy penalties.
+A candidate with 3.3 years gets a score of **0.16**.
+
+Not 0.75.
+
+Because the JD said what it said.
 
 ---
 
-### 30% Behavioral Reality
+### 25% Behavioral Reality
 
 A perfect engineer who never replies isn't useful.
 
-So we incorporated:
+So we fused four behavioral signals:
 
-* Recruiter response rate
-* Login recency
-* Activity score
+* **35%** Recruiter response rate
+* **25%** Login recency
+* **20%** GitHub activity score
+* **20%** Platform skill assessment scores
 
 Because hiring isn't just about skill.
 
 It's about availability.
+
+And verifiability.
+
+---
+
+### 20% Skill Quality
+
+Not all skills are created equal.
+
+A candidate with 15 skills at "beginner" level is very different from one with 15 skills at "expert" level.
+
+We weight each skill by:
+
+* Proficiency level (beginner through expert)
+* Endorsement count
+* Direct JD relevance (Python, PyTorch, and Qdrant matter more than Excel)
+
+And we use safe matching to prevent false positives.
+
+"HTML" doesn't match "ML".
+
+"Storage" doesn't match "RAG".
+
+Because precision matters.
 
 ---
 
@@ -391,7 +426,7 @@ Pandas may reorder them differently across runs.
 
 Which means:
 
-Today's Top-100 ≠ Tomorrow's Top-100
+Today's Top-100 does not equal Tomorrow's Top-100.
 
 Chaos.
 
@@ -404,7 +439,7 @@ We enforced deterministic ranking:
 1. Round scores to 4 decimal places.
 2. Secondary sort by candidate ID.
 
-```python
+```
 (score DESC, candidate_id ASC)
 ```
 
@@ -494,6 +529,7 @@ python3 app.py
 * rank_bm25
 * Sentence Transformers
 * Gradio
+* scikit-learn
 * NumPy
 
 ---
@@ -520,15 +556,15 @@ it's about knowing what to ignore.
 
 ```text
 100,000 Candidates
-↓
+    |
 72,689 eliminated by heuristics
-↓
+    |
 27,000 survivors
-↓
+    |
 BM25 extracts Top 500
-↓
-Semantic ranking
-↓
+    |
+Semantic + Behavioral + Skill Quality ranking
+    |
 Top 100 finalists
 ```
 
